@@ -8,7 +8,11 @@ install_dir=$(ynh_app_setting_get --app="$app" --key=install_dir)
 
 if [ -f "$install_dir/docker-compose.yml" ]; then
   cd "$install_dir"
-  docker compose down || true
+  if command -v docker-compose >/dev/null 2>&1; then
+    docker-compose down || true
+  else
+    docker compose down || true
+  fi
 fi
 
 ynh_remove_nginx_config

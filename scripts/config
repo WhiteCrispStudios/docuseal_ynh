@@ -45,4 +45,8 @@ cat ../conf/docker-compose.yml \
   > "$install_dir/docker-compose.yml"
 
 cd "$install_dir"
-docker compose up -d
+if command -v docker-compose >/dev/null 2>&1; then
+  docker-compose up -d
+else
+  docker compose up -d
+fi

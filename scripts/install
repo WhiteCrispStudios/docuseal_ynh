@@ -58,7 +58,11 @@ cat ../conf/docker-compose.yml \
 ynh_add_nginx_config
 
 cd "$install_dir"
-docker compose up -d
+if command -v docker-compose >/dev/null 2>&1; then
+  docker-compose up -d
+else
+  docker compose up -d
+fi
 
 # public access
 ynh_permission_create --app="$app" --url="$app_path" --auth_header=false --public=true
