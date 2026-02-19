@@ -18,6 +18,9 @@ architectures = ["amd64", "arm64"]
 multi_instance = true
 ldap = "not_relevant"
 sso = "not_relevant"
+disk = "500M"
+ram.build = "50M"
+ram.runtime = "200M"
 
 [install]
   [install.domain]
