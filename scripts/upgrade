@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+source /usr/share/yunohost/helpers
+
+app=${app:?}
+install_dir=$(ynh_app_setting_get --app="$app" --key=install_dir)
+
+cd "$install_dir"
+docker compose pull
+docker compose up -d

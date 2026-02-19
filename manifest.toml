@@ -1,0 +1,60 @@
+packaging_format = 2
+
+id = "docuseal"
+name = "Docuseal"
+description.en = "Self-hosted e-signatures"
+description.fr = "Signatures électroniques auto-hébergées"
+version = "0.1.0~ynh1"
+maintainers = []
+
+[upstream]
+license = "AGPL-3.0"
+website = "https://docuseal.com"
+code = "https://github.com/docusealco/docuseal"
+
+[integration]
+yunohost = ">= 11.2.4"
+architectures = ["amd64", "arm64"]
+multi_instance = true
+ldap = "not_relevant"
+sso = "not_relevant"
+
+[install]
+  [install.domain]
+  type = "domain"
+
+  [install.path]
+  type = "path"
+  default = "/sign"
+
+  [install.app_port]
+  type = "number"
+  default = 3900
+
+  [install.smtp_host]
+  type = "string"
+  optional = true
+
+  [install.smtp_port]
+  type = "number"
+  default = 587
+  optional = true
+
+  [install.smtp_user]
+  type = "string"
+  optional = true
+
+  [install.smtp_pass]
+  type = "password"
+  optional = true
+
+  [install.smtp_from]
+  type = "string"
+  optional = true
+
+[resources]
+  [resources.system_user]
+  [resources.install_dir]
+  [resources.data_dir]
+  [resources.permissions]
+    main.url = "/"
