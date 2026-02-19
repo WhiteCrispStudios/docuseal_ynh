@@ -122,3 +122,16 @@ ynh_system_user_del_group() {
 		gpasswd -d "$username" "$group"
 	done
 }
+
+# Disable ssowat for a specific domain (public app path bypass)
+ynh_disable_ssowat_for_domain() {
+	local domain_to_disable="$1"
+	if [ -z "$domain_to_disable" ]; then
+		return 0
+	fi
+	local domain_conf="/etc/nginx/conf.d/${domain_to_disable}.conf"
+	if [ -f "$domain_conf" ]; then
+		sed -i '/access_by_lua_file \/usr\/share\/ssowat\/access.lua;/d' "$domain_conf"
+		systemctl reload nginx
+	fi
+}

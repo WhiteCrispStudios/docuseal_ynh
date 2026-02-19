@@ -2,6 +2,7 @@
 
 set -e
 source /usr/share/yunohost/helpers
+source ./_common.sh
 
 app=${app:?}
 
@@ -56,6 +57,9 @@ cat ../conf/docker-compose.yml \
 
 # nginx proxy
 ynh_add_nginx_config
+
+# ensure ssowat is disabled for this domain (public app)
+ynh_disable_ssowat_for_domain "$app_domain"
 
 cd "$install_dir"
 if command -v docker-compose >/dev/null 2>&1; then
