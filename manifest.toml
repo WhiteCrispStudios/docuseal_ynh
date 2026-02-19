@@ -33,6 +33,8 @@ ram.runtime = "200M"
   [install.app_port]
   type = "number"
   default = 3900
+  min = 1
+  max = 65535
 
   [install.smtp_host]
   type = "string"
@@ -43,6 +45,8 @@ ram.runtime = "200M"
   type = "number"
   default = 587
   optional = true
+  min = 1
+  max = 65535
   help = "SMTP Port (z. B. 587)"
 
   [install.smtp_user]
