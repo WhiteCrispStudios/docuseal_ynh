@@ -70,3 +70,4 @@ ram.runtime = "200M"
   [resources.data_dir]
   [resources.permissions]
     main.url = "/"
+    main.allowed = "visitors"
