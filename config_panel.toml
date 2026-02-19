@@ -17,7 +17,7 @@ name = "Docuseal"
         optional = true
 
         [main.smtp.smtp_user]
-        ask = "SMTP Benutzer (z. B. sign@dawagu.de)"
+        ask = "SMTP Benutzer (z. B. sign@example.com)"
         type = "string"
         optional = true
 

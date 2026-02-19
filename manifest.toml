@@ -48,7 +48,7 @@ ram.runtime = "200M"
   [install.smtp_user]
   type = "string"
   optional = true
-  help = "SMTP Benutzer (z. B. sign@dawagu.de)"
+  help = "SMTP Benutzer (z. B. sign@example.com)"
 
   [install.smtp_pass]
   type = "password"
