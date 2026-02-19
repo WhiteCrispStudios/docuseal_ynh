@@ -37,23 +37,28 @@ ram.runtime = "200M"
   [install.smtp_host]
   type = "string"
   optional = true
+  help = "SMTP Host (z. B. localhost)"
 
   [install.smtp_port]
   type = "number"
   default = 587
   optional = true
+  help = "SMTP Port (z. B. 587)"
 
   [install.smtp_user]
   type = "string"
   optional = true
+  help = "SMTP Benutzer (z. B. sign@dawagu.de)"
 
   [install.smtp_pass]
   type = "password"
   optional = true
+  help = "SMTP Passwort der Mailbox"
 
   [install.smtp_from]
   type = "string"
   optional = true
+  help = "Absenderadresse (From)"
 
 [resources]
   [resources.system_user]

@@ -7,26 +7,26 @@ name = "Docuseal"
     name = "SMTP"
 
         [main.smtp.smtp_host]
-        ask = "SMTP Host"
+        ask = "SMTP Host (z. B. localhost)"
         type = "string"
         optional = true
 
         [main.smtp.smtp_port]
-        ask = "SMTP Port"
+        ask = "SMTP Port (z. B. 587)"
         type = "number"
         optional = true
 
         [main.smtp.smtp_user]
-        ask = "SMTP User"
+        ask = "SMTP Benutzer (z. B. sign@dawagu.de)"
         type = "string"
         optional = true
 
         [main.smtp.smtp_pass]
-        ask = "SMTP Passwort"
+        ask = "SMTP Passwort (Mailbox)"
         type = "password"
         optional = true
 
         [main.smtp.smtp_from]
-        ask = "SMTP From"
+        ask = "Absenderadresse (From)"
         type = "string"
         optional = true
