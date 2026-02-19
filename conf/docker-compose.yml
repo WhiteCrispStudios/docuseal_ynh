@@ -5,7 +5,7 @@ services:
     container_name: docuseal__APP__
     restart: unless-stopped
     environment:
-      - DATABASE_URL=sqlite3:////data/docuseal.db
+      - WORKDIR=/data
       - APP_URL=__APP_URL__
       - SMTP_HOST=__SMTP_HOST__
       - SMTP_PORT=__SMTP_PORT__
