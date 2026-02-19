@@ -69,6 +69,6 @@ ram.runtime = "200M"
   [resources.install_dir]
   [resources.data_dir]
   [resources.permissions]
-    main.url = "/"
+    main.url = "__PATH__"
     main.allowed = "visitors"
     main.auth_header = false
