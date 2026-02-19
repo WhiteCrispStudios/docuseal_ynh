@@ -64,5 +64,4 @@ else
   docker compose up -d
 fi
 
-# public access
-ynh_permission_create --app="$app" --permission="main" --url="$app_path" --allowed="visitors"
+# permissions already provisioned by resources.permissions
